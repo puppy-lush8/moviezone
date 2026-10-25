@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MovieZone</title>
+</head>
+<body>
+
+    <header>
+        <h1>MovieZone</h1>
+
+        <nav>
+    <a href="#home">Home</a>
+    <a href="#movies">Movies</a>
+    <a href="#watchlist">My Watchlist</a>
+    <a href="#series">TV Series</a>
+    <a href="#kenyan-movies">Kenyan Movies</a>
+</nav>
+    </header>
+
+    <main id="home">
+        <section>
+            <h2>Welcome to MovieZone</h2>
+            <p>Discover movies, explore stories, and find your next favorite film.</p>
+            <button type="button" onclick="document.getElementById('movies').scrollIntoView({behavior: 'smooth'})">
+                Explore Movies
+            </button>
+        </section>
+
+       
+<section>
+    <input id="search" type="text" placeholder="Search movies...">
+
+    <select id="genre-filter">
+        <option value="all">All Genres</option>
+        <option value="Action">Action</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Romance">Romance</option>
+        <option value="Drama">Drama</option>
+    </select>
+</section>
+
+
+  
+<section class="hero-banner">
+    <div class="hero-content">
+        <p class="hero-label">FEATURED MOVIE</p>
+
+        <h1 id="hero-title">Inception</h1>
+
+        <p id="hero-description">
+            A thief enters people's dreams to steal secrets.
+        </p>
+
+        <div class="hero-buttons">
+            <button id="hero-details-button" type="button">
+                ▶ View Movie
+            </button>
+
+            <button id="hero-browse-button" type="button">
+                Browse Movies
+            </button>
+        </div>
+    </div>
+</section>
+      
+
+<section id="trending" class="trending-section">
+    <div class="trending-header">
+        <h2>🔥 Trending Movies</h2>
+
+        <div class="trending-arrows">
+            <button id="trending-left" type="button" aria-label="Scroll left">❮</button>
+            <button id="trending-right" type="button" aria-label="Scroll right">❯</button>
+        </div>
+    </div>
+
+    <div id="trending-movies" class="movie-container">
+    </div>
+</section>
+
+<section id="kenyan-movies">
+    <h2>🇰🇪 Kenyan Movies</h2>
+    <div id="kenyan-movie-list" class="movie-container"></div>
+</section>
+
+
+<section id="movies">
+    <h2>Popular Movies</h2>
+    <div id="movie-container"></div>
+</section>
+
+<!-- Movie details screen -->
+<section id="movie-details" hidden>
+    <button id="back-button" type="button">
+        ← Back to Movies
+    </button>
+
+    <div class="details-content">
+        <img id="details-poster" src="" alt="Movie poster">
+
+        <div class="details-info">
+            <h2 id="details-title"></h2>
+
+            <p id="details-rating"></p>
+<p id="details-year"></p>
+<p id="details-runtime"></p>
+            <p id="details-genre"></p>
+
+            <p id="details-description"></p>
+            
+<h3 id="player-heading" class="player-heading">Video Player Demo</h3>
+
+<video id="movie-player" controls preload="metadata" hidden>
+    <source
+        src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+        type="video/mp4"
+    >
+    Your browser does not support HTML video.
+</video>
+
+<p id="player-note" class="player-note">
+    This is a sample video for testing the player.
+</p>
+
+<button id="trailer-button" type="button">
+    ▶ Watch Trailer
+</button>
+
+<button id="watchlist-button" type="button">
+    + Add to Watchlist
+</button>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="watchlist">
+    <h2>My Watchlist</h2>
+    <p>Movies you save will appear here.</p>
+    <div id="watchlist-container"></div>
+</section>
+
+        
+
+
+<section id="series">
+    <h2>Popular TV Series</h2>
+
+    <input
+        id="series-search"
+        type="text"
+        placeholder="Search TV series..."
+    >
+
+    <select id="series-genre-filter">
+        <option value="all">All Genres</option>
+        <option value="Sci-Fi / Drama">Sci-Fi / Drama</option>
+        <option value="Mystery / Comedy">Mystery / Comedy</option>
+        <option value="Crime / Drama">Crime / Drama</option>
+        <option value="Fantasy / Action">Fantasy / Action</option>
+    </select>
+
+    <div id="series-container"></div>
+</section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MovieZone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
